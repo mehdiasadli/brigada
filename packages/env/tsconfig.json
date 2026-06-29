@@ -1,0 +1,3 @@
+{
+	"extends": "@brigada/config/tsconfig.base.json"
+}

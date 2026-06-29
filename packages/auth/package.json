@@ -1,0 +1,27 @@
+{
+	"name": "@brigada/auth",
+	"type": "module",
+	"exports": {
+		".": {
+			"default": "./src/index.ts"
+		},
+		"./*": {
+			"default": "./src/*.ts"
+		}
+	},
+	"scripts": {
+		"generate": "DATABASE_URL=postgresql://postgres:postgres@localhost:5432 BETTER_AUTH_SECRET=dummy_better_auth_secret_123456789 BETTER_AUTH_URL=https://localhost:3000 DISCORD_CLIENT_ID=dummy_did DISCORD_CLIENT_SECRET=dummy_dsecret bunx @better-auth/cli@latest generate --config=./src/index.ts --output=../db/prisma/schema/auth.preview.prisma"
+	},
+	"dependencies": {
+		"@brigada/db": "workspace:*",
+		"@brigada/utils": "workspace:*",
+		"@brigada/env": "workspace:*",
+		"better-auth": "catalog:",
+		"dotenv": "catalog:",
+		"zod": "catalog:"
+	},
+	"devDependencies": {
+		"@brigada/config": "workspace:*",
+		"typescript": "catalog:"
+	}
+}

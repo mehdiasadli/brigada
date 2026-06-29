@@ -1,0 +1,29 @@
+{
+	"name": "@brigada/api",
+	"type": "module",
+	"exports": {
+		".": {
+			"default": "./src/index.ts"
+		},
+		"./*": {
+			"default": "./src/*.ts"
+		}
+	},
+	"scripts": {},
+	"dependencies": {
+		"@brigada/auth": "workspace:*",
+		"@brigada/db": "workspace:*",
+		"@brigada/env": "workspace:*",
+		"@orpc/client": "catalog:",
+		"@orpc/openapi": "catalog:",
+		"@orpc/server": "catalog:",
+		"@orpc/zod": "catalog:",
+		"dotenv": "catalog:",
+		"zod": "catalog:"
+	},
+	"devDependencies": {
+		"@brigada/config": "workspace:*",
+		"hono": "catalog:",
+		"typescript": "catalog:"
+	}
+}

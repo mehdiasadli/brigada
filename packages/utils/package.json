@@ -1,0 +1,22 @@
+{
+	"name": "@brigada/utils",
+	"type": "module",
+	"exports": {
+		".": {
+			"default": "./src/index.ts"
+		},
+		"./*": {
+			"default": "./src/*.ts"
+		}
+	},
+	"scripts": {},
+	"dependencies": {
+		"@brigada/env": "workspace:*",
+		"dotenv": "catalog:",
+		"zod": "catalog:"
+	},
+	"devDependencies": {
+		"@brigada/config": "workspace:*",
+		"typescript": "catalog:"
+	}
+}

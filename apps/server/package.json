@@ -1,0 +1,33 @@
+{
+	"name": "server",
+	"type": "module",
+	"main": "src/index.ts",
+	"scripts": {
+		"build": "tsdown",
+		"check-types": "tsc -b",
+		"compile": "bun build --compile --minify --sourcemap --bytecode ./src/index.ts --outfile server",
+		"dev": "bun run --hot src/index.ts",
+		"start": "bun run dist/index.mjs"
+	},
+	"dependencies": {
+		"@brigada/api": "workspace:*",
+		"@brigada/auth": "workspace:*",
+		"@brigada/db": "workspace:*",
+		"@brigada/env": "workspace:*",
+		"@orpc/openapi": "catalog:",
+		"@orpc/server": "catalog:",
+		"@orpc/zod": "catalog:",
+		"better-auth": "catalog:",
+		"dotenv": "catalog:",
+		"evlog": "catalog:",
+		"hono": "catalog:",
+		"zod": "catalog:",
+		"@brigada/utils": "workspace:*"
+	},
+	"devDependencies": {
+		"@brigada/config": "workspace:*",
+		"@types/bun": "catalog:",
+		"tsdown": "^0.21.9",
+		"typescript": "catalog:"
+	}
+}
