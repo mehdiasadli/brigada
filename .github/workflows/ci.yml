@@ -11,6 +11,11 @@ concurrency:
 
 env:
   TURBO_TELEMETRY_DISABLED: 1
+  # @brigada/db's `postinstall` runs `prisma generate`, which loads
+  # prisma.config.ts. That config calls env("DATABASE_URL") eagerly and
+  # throws if unset. We use a dummy URL on CI because generate only parses
+  # the schema; it doesn't open a connection.
+  DATABASE_URL: postgresql://postgres:postgres@localhost:5432/ci
 
 jobs:
   biome:
