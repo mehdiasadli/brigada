@@ -30,7 +30,8 @@
 			"!scripts/templates",
 			"!.agents",
 			"!.claude",
-			"!.cursor"
+			"!.cursor",
+			"!**/prisma/generated"
 		]
 	},
 	"formatter": {
