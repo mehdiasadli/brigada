@@ -189,6 +189,9 @@
         "tailwindcss": "catalog:",
         "typescript": "catalog:",
       },
+      "peerDependencies": {
+        "next": "^16.0.0",
+      },
     },
     "packages/utils": {
       "name": "@brigada/utils",
